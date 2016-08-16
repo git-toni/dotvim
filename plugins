@@ -7,3 +7,5 @@ slim-template/vim-slim
 wavdev/vim-stylus
 tpope/vim-surround
 jiangmiao/auto-pairs
+vim-ruby/vim-ruby
+scrooloose/nerdtree
