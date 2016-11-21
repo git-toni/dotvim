@@ -19,6 +19,8 @@ nnoremap <buffer> <silent> g] :exe       "tselect =RubyCursorIdentifier()"
 nnoremap <buffer> <silent> g :exe         "tjump =RubyCursorIdentifier()"
 imap <buffer> <silent> g <Plug>delimitMateJumpMany
 inoremap <buffer> <silent>  =AutoPairsDelete()
+cmap <buffer>  <Plug><cfile>
+cmap <buffer>  <Plug><cword>
 inoremap <buffer> <silent>   =AutoPairsSpace()
 inoremap <buffer> <silent> " =AutoPairsInsert('"')
 inoremap <buffer> <silent> ' =AutoPairsInsert('''')
@@ -36,6 +38,7 @@ unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
+setlocal balloonexpr=RubyBalloonexpr()
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -164,12 +167,12 @@ normal! zc
 normal! zo
 128
 normal! zo
-let s:l = 5 - ((4 * winheight(0) + 10) / 20)
+let s:l = 1 - ((0 * winheight(0) + 20) / 40)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 05|
+1
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

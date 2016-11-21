@@ -9,3 +9,6 @@ tpope/vim-surround
 jiangmiao/auto-pairs
 vim-ruby/vim-ruby
 scrooloose/nerdtree
+elixir-lang/vim-elixir
+mxw/vim-jsx
+mattn/emmet-vim
